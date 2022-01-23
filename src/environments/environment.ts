@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURL:"http://localhost:7000"
+  apiURL:"https://angback.herokuapp.com/"
 };
 
 /*
