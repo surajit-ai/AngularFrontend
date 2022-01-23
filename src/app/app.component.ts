@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AccountserviceService } from './account/services/accountservice.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(
+    public router:Router,
+    private accountService: AccountserviceService
+  ){}
   title = 'frontend';
+  ngOnInit():void{
+    this.accountService.autoAuthUser();
+  }
 }
